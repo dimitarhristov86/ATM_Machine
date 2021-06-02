@@ -27,7 +27,27 @@ def get_withdraw(balance):
 def get_deposit(balance):
     while True:
         try:
-            deposit_amount = float(input("Please enter deposit amount to deposit\n-->"))
+            deposit_amount = float(input("Please enter amount to deposit in your bank account\n-->"))
             return deposit_amount
         except ValueError:
             print("Amount has to be a number-example(125.45, 100.....")
+
+
+def entry_log():
+    while True:
+        print(30 * "-")
+        print()
+        print("WELCOME TO BULGARIAN ATM MACHINES")
+        print()
+        print(30 * "-")
+        try:
+            entry_action = int(input("Do you want to continue?\n1.YES\n2.NO\n-->"))
+            if entry_action == 1:
+                return True
+            elif entry_action == 2:
+                print("Thank you for visiting us! Have a nice day! ")
+                exit()
+            elif entry_action >= 3:
+                print("Action has to be a number(1 or 2), try again!")
+        except ValueError:
+            print("Action has to be a number(1 or 2), try again!")
