@@ -6,8 +6,8 @@ entry_log()
 
 
 def main_menu():
-    name_input = input("Please enter your name\n-->").lower()
     while True:
+        name_input = input("Please enter your name\n-->").lower()
         if CLIENTS.get(name_input):
             client = CLIENTS.get(name_input)
             if pin_validation(client):
@@ -28,9 +28,16 @@ def main_menu():
                     main_menu()
                 elif action == "3":
                     print(f"Your balance is {balance:.2f}lv")
-                    main_menu()
+                    time.sleep(3)
+                    entry_log()
                 elif action == "4":
+                    entry_log()
+                else:
+                    print("Wrong key reference, try again! ")
+                    time.sleep(1)
                     entry_log()
         else:
             print(f"No such client {name_input}")
+            print("Try again! ")
+            time.sleep(1)
             entry_log()

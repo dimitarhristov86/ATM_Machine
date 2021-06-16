@@ -44,6 +44,7 @@ def entry_log():
             entry_action = int(input("Do you want to continue?\n1.YES\n2.NO\n-->"))
             if entry_action == 1:
                 return True
+                pass
             elif entry_action == 2:
                 print("Thank you for visiting us! Have a nice day! ")
                 exit()
