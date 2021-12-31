@@ -21,7 +21,7 @@ def get_withdraw(balance):
             else:
                 print(f"You don't have enough money!Your balance is {balance}.Try again")
         except ValueError:
-            print("Amount has to be a numbers:(example-125.25, 100....")
+            print("Amount has to be a number:(example-125.25, 100....")
 
 
 def get_deposit(balance):
