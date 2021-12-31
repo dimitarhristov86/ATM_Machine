@@ -33,13 +33,16 @@ def get_deposit(balance):
             print("Amount has to be a number-example(125.45, 100.....")
 
 
+def welcome_note():
+    print(30 * "-")
+    print()
+    print("WELCOME TO BULGARIAN ATM MACHINES")
+    print()
+    print(30 * "-")
+
+
 def entry_log():
     while True:
-        print(30 * "-")
-        print()
-        print("WELCOME TO BULGARIAN ATM MACHINES")
-        print()
-        print(30 * "-")
         try:
             entry_action = int(input("Do you want to continue?\n1.YES\n2.NO\n-->"))
             if entry_action == 1:

@@ -1,7 +1,8 @@
 import time
 from clients import CLIENTS
-from helpers import pin_validation, get_withdraw, get_deposit, entry_log
+from helpers import pin_validation, get_withdraw, get_deposit, entry_log, welcome_note
 
+welcome_note()
 entry_log()
 
 
@@ -20,12 +21,12 @@ def main_menu():
                     withdraw_amount = get_withdraw(balance)
                     new_balance = balance - withdraw_amount
                     print(f"You just withdraw {withdraw_amount:.2f}lv.\nYour new balance is {new_balance:.2f}lv")
-                    main_menu()
+                    entry_log()
                 elif action == "2":
                     deposit_amount = get_deposit(balance)
                     new_balance = balance + deposit_amount
                     print(f"You just deposit {deposit_amount:.2f}lv\nYour new balance is {new_balance:.2f}lv")
-                    main_menu()
+                    entry_log()
                 elif action == "3":
                     print(f"Your balance is {balance:.2f}lv")
                     time.sleep(3)
